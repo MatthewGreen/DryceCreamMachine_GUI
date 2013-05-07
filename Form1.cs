@@ -97,5 +97,28 @@ namespace DryceCreamGUI
         {
             if (serialPort1.IsOpen) serialPort1.Close();
         }
+
+        private void btn_ToggleSelect_Click(object sender, EventArgs e)
+        {
+            cb_A_Vanilla.Checked = !cb_A_Vanilla.Checked;
+            cb_A_Chocolate.Checked = !cb_A_Chocolate.Checked;
+            cb_A_Topping.Checked = !cb_A_Topping.Checked;
+
+            cb_B_Vanilla.Checked = !cb_B_Vanilla.Checked;
+            cb_B_Chocolate.Checked = !cb_B_Chocolate.Checked;
+            cb_B_Topping.Checked = !cb_B_Topping.Checked;
+
+            cb_C_Vanilla.Checked = !cb_C_Vanilla.Checked;
+            cb_C_Chocolate.Checked = !cb_C_Chocolate.Checked;
+            cb_C_Topping.Checked = !cb_C_Topping.Checked;
+
+            cb_D_Vanilla.Checked = !cb_D_Vanilla.Checked;
+            cb_D_Chocolate.Checked = !cb_D_Chocolate.Checked;
+            cb_D_Topping.Checked = !cb_D_Topping.Checked;
+
+            cb_E_Vanilla.Checked = !cb_E_Vanilla.Checked;
+            cb_E_Chocolate.Checked = !cb_E_Chocolate.Checked;
+            cb_E_Topping.Checked = !cb_E_Topping.Checked;
+        }
     }
 }

@@ -52,6 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Done = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.btn_ToggleSelect = new System.Windows.Forms.Button();
             this.SlotA.SuspendLayout();
             this.SlotB.SuspendLayout();
             this.SlotC.SuspendLayout();
@@ -304,7 +305,7 @@
             // 
             this.btn_Done.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Done.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_Done.Location = new System.Drawing.Point(259, 226);
+            this.btn_Done.Location = new System.Drawing.Point(259, 219);
             this.btn_Done.Name = "btn_Done";
             this.btn_Done.Size = new System.Drawing.Size(117, 54);
             this.btn_Done.TabIndex = 4;
@@ -316,11 +317,23 @@
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
+            // btn_ToggleSelect
+            // 
+            this.btn_ToggleSelect.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ToggleSelect.Location = new System.Drawing.Point(480, 81);
+            this.btn_ToggleSelect.Name = "btn_ToggleSelect";
+            this.btn_ToggleSelect.Size = new System.Drawing.Size(108, 32);
+            this.btn_ToggleSelect.TabIndex = 5;
+            this.btn_ToggleSelect.Text = "Toggle Select All";
+            this.btn_ToggleSelect.UseVisualStyleBackColor = true;
+            this.btn_ToggleSelect.Click += new System.EventHandler(this.btn_ToggleSelect_Click);
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(626, 458);
+            this.Controls.Add(this.btn_ToggleSelect);
             this.Controls.Add(this.btn_Done);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SlotE);
@@ -371,6 +384,7 @@
         private System.Windows.Forms.CheckBox cb_E_Vanilla;
         private System.Windows.Forms.Button btn_Done;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Button btn_ToggleSelect;
     }
 }
 
