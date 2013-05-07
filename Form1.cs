@@ -48,13 +48,13 @@ namespace DryceCreamGUI
             bool ChocolateE = cb_E_Chocolate.Checked;
             bool ToppingE = cb_E_Topping.Checked;
 
-            String concatA = VanillaA.ToString() + "," + ChocolateA.ToString() + "," + ToppingA.ToString();
-            String concatB = VanillaB.ToString() + "," + ChocolateB.ToString() + "," + ToppingB.ToString();
-            String concatC = VanillaC.ToString() + "," + ChocolateC.ToString() + "," + ToppingC.ToString();
-            String concatD = VanillaD.ToString() + "," + ChocolateD.ToString() + "," + ToppingD.ToString();
-            String concatE = VanillaE.ToString() + "," + ChocolateE.ToString() + "," + ToppingE.ToString();
+            String concatA = Convert.ToInt32(VanillaA).ToString() + "," + Convert.ToInt32(ChocolateA).ToString() + "," + Convert.ToInt32(ToppingA).ToString();
+            String concatB = Convert.ToInt32(VanillaB).ToString() + "," + Convert.ToInt32(ChocolateB).ToString() + "," + Convert.ToInt32(ToppingB).ToString();
+            String concatC = Convert.ToInt32(VanillaC).ToString() + "," + Convert.ToInt32(ChocolateC).ToString() + "," + Convert.ToInt32(ToppingC).ToString();
+            String concatD = Convert.ToInt32(VanillaD).ToString() + "," + Convert.ToInt32(ChocolateD).ToString() + "," + Convert.ToInt32(ToppingD).ToString();
+            String concatE = Convert.ToInt32(VanillaE).ToString() + "," + Convert.ToInt32(ChocolateE).ToString() + "," + Convert.ToInt32(ToppingE).ToString();
 
-            String finalString = concatA + "," + concatB + "," + concatC + "," + concatD + "," + concatE;
+            String finalString = concatA + "," + concatB + "," + concatC + "," + concatD + "," + concatE + "\n";
 
             System.Windows.Forms.MessageBox.Show(finalString);
             
@@ -76,7 +76,7 @@ namespace DryceCreamGUI
                 
                 btn_Done.Enabled = false;
                 //serialPort1.Write("1");
-                Console.WriteLine(temp.ToCharArray());
+                //Console.WriteLine(temp.ToCharArray());
                 //serialPort1.Write(new byte[] { bytes }, 0, 1);
                 serialPort1.Write(bytes, 0, bytes.Length);
                 System.Threading.Thread.Sleep(1000);
